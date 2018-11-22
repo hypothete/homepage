@@ -5,60 +5,126 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Duncan Alexander - hypothete.com</title>
 		<meta name="p:domain_verify" content="f8f0ce2921dd920862b677d7a97b3ac1"/>
-		<link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Assistant:300,600" rel="stylesheet">
 		<link rel="stylesheet" href="styles.css">
 	</head>
 	<body>
-		<div class="content">
-			<header>
-				<h3>
-					Web experiments by Duncan Alexander
-				</h3>
-			</header>
-
-			<div class="interface">
-				<background>.</background>
-				<div class="menu">
-					<span><a href="#" @click="menuitem='projects'">Projects</a></span>
-					<span><a href="#" @click="menuitem='about'">About</a></span>
-					<span><a href="resume/index.html" rel="noopener">Resume</a></span>
-				</div>
-
-				<div class="projects projectlist" v-show="menuitem==='projects'">
-					<div>
-						<div class="projectitem" v-for="year in years" @click="selectYear(year)">
-							<span :class="{selected : selectedYear === year}">{{year}}</span>
-						</div>
-					</div>
-
-					<div class="projectnames">
-						<div class="projectitem" v-for="project in projects">
-							<a :href="'/projects/'+selectedYear+'/'+project" target="blank" noreferrer>{{project}}</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="about" v-show="menuitem==='about'">
-					<p>
-						I'm a front-end web developer living in Portland, Oregon. I specialize in procedural generation, image processing, and 3D on the web.
-					</p>
-
-					<p>
-						hypothete.com has been my repository for web content since 2009. Most of the site is graphics experiments, games, software tools, and artwork.
-					</p>
-					<p>
-						You can contact me at:
-					</p>
-					<ul>
-						<li><a href="http://twitter.com/Hypothete" target="blank" rel="noopener">Twitter</a></li>
-						<li><a href="http://github.com/hypothete" target="blank" rel="noopener">Github</a></li>
-						<li><a href="mailto:duncan@hypothete.com">Email</a></li>
-					</ul>
-				</div>
+		<header>
+			<div id="header-contents">
+				<h1>
+					Duncan Alexander
+				</h1>
+				<ul class="horiz-list">
+					<li>
+						<a href="#splash">Splash</a>
+					</li>
+					<li>
+						<a href="#projects">Projects</a>
+					</li>
+					<li>
+						<a href="#about">About</a>
+					</li>
+				</ul>
 			</div>
+		</header>
 
-		</div>
+		<section id="splash">
+			<!-- Cool graphics here -->
+		</section>
 
-		<script src="minified.js"></script>
+		<section id="projects">
+			<h2>Selected Projects</h2>
+
+			<h3>Recent</h3>
+			<ul>
+				<li class="card">
+					<a href="https://github.com/hypothete/dowel" noopener target="_blank">Dowel</a>
+					A 3D graphics library built using WebGL2 and ES2018 modules
+				</li>
+				<li class="card">
+					<a href="https://github.com/hypothete/compute" noopener target="_blank">Compute</a>
+					A path tracer written in Go that uses OpenGL
+				</li>
+				<li class="card">
+					<a href="https://github.com/pollinate/Bowlcut" noopener target="_blank">Bowlcut</a>
+					A library for hairy SVG text manipulation
+				</li>
+				<li class="card">
+					<a href="https://hypothete.com/projects/2018/perlin-flow-playground/" noopener target="_blank">Perlin Flow Playground</a>
+					An experiment with flow fields
+				</li>
+				<li class="card">
+					<a href="https://hypothete.com/projects/2018/light-field-viewer/" noopener target="_blank">Light field viewer</a>
+					Uses WebGL to render lightfields
+				</li>
+			</ul>
+
+			<h3>Tools</h3>
+				<ul>
+					<li class="card">
+						<a href="https://hypothete.com/projects/2017/tesselator/" noopener target="_blank">Tesselator</a>
+						Draw tesselated patterns!
+					</li>
+					<li class="card">
+						<a href="https://hypothete.com/projects/2016/ikea-spell-generator/" noopener target="_blank">Ikea Spell Generator</a>
+						Generate spell names for your next gaming session from flat pack furniture
+					</li>
+					<li class="card">
+						<a href="https://hypothete.com/projects/2016/pico-8-dither/" noopener target="_blank">Pico-8 Palette Ditherer</a>
+						Dithers images into the Pico-8 palette
+					</li>
+					<li class="card">
+						<a href="https://hypothete.com/projects/2014/Image%20resizer%20and%20dataUrl/" noopener target="_blank">DataURL Generator</a>
+						Resizes and converts images to dataurls
+					</li>
+					<li class="card">
+						<a href="https://hypothete.com/projects/2015/palettegen/" noopener target="_blank">PaletteGen</a>
+						Samples images to create palettes
+					</li>
+			</ul>
+
+			<h3>Art</h3>
+			<ul>
+				<li class="card">
+					<a href="https://hypothete.com/projects/2012/rotors/" noopener target="_blank">Rotors (2012)</a>
+					A series of works that experiment with the DOM as a medium
+				</li>
+				<li class="card">
+					<a href="https://soundcloud.com/hypothete" noopener target="_blank">Sound Collages (2011)</a>
+					Check out my SoundCloud
+				</li>
+				<li class="card">
+					<a href="https://hypothete.com/projects/2010/catalog/" noopener target="_blank">Human Kibble Winter 2010 Catalog</a>
+					A collaborative net artwork made from found materials
+				</li>
+				<li class="card">
+					<a href="https://hypothete.com/projects/2010/school/" noopener target="_blank">Undergrad work (2009)</a>
+					Paintings and projections
+				</li>
+			</ul>
+
+			<h3>
+				<a href="https://hypothete.com/projects/" noopener target="_blank">
+					All projects
+				</a>
+			</h3>
+
+		</section>
+	
+		<section id="about">
+			<h2>About</h2>
+			<p>
+				I'm a front-end web developer living in Portland, Oregon.
+				I specialize in web graphics, including 2D, 3D, and image processing.
+				Since 2009, hypothete.com has been the home for my experiments, games, software tools, and artwork.
+			</p>
+			<ul class="horiz-list">
+				<li><a href="http://twitter.com/Hypothete" target="blank" rel="noopener">Twitter</a></li>
+				<li><a href="http://github.com/hypothete" target="blank" rel="noopener">Github</a></li>
+				<li><a href="/resume.html" target="blank" rel="noopener">Resume</a></li>
+				<li><a href="mailto:duncan@hypothete.com">Email</a></li>
+			</ul>
+		</section>
+
 	</body>
 </html>
