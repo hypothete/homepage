@@ -1,10 +1,10 @@
 :root {
 	--main: #003;
-	--section1: #f0f;
-	--section2: #0f0;
-	--section3: #fc0;
-	--primary: #00f;
-	--secondary: #0ff;
+	--section1: #00E3FF;
+	--section2: #FFC091;
+	--section3: #9DF4FF;
+	--primary: #009FB2;
+	--secondary: #B24D00;
 	--tertiary: #363;
 	--link1: #fff;
 	--link1h: #ccc;
@@ -73,7 +73,8 @@ header {
 section {
 	padding: 6em 2em 2em 2em;
 	max-width: 980px;
-	border-top: 3px double var(--section2);
+	border-top: 3px double var(--secondary);
+	background: var(--section3);
 }
 
 section:nth-child(2) {
@@ -105,8 +106,8 @@ li {
 }
 
 .card {
-	background-color: var(--section3);
-	color: var(--tertiary);
+	background-color: var(--section2);
+	color: var(--primary);
 	padding: 1em;
 	display: flex;
 	flex-direction: column;
